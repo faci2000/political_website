@@ -28,7 +28,7 @@ SECRET_KEY = 'xdm#9-al)apaf(x9v(m-f(7sl!5n$==-&ct_9g$^g@u*v+ft!5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tspolska.herokuapp.com']
 
 
 # Application definition
