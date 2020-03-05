@@ -1,0 +1,283 @@
+{% extends "info/header_footer.html" %}
+{% block content %}
+<main>
+            
+            <article>
+                
+                <header>
+                    
+                    <div class="introduction">
+                    <h1> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum
+                        elementum pulvinar ...
+                    </h1>
+                    </div>
+                    <div id="Onas"></div>
+                    
+                </header>
+                
+                
+                
+                <!-- ###### "O nas" ###### -->
+                <section>
+                    
+                    <header>
+                        
+                        <div class="SectionHeader" >
+                            
+                           <div>O nas</div>
+                           <div class="StickyLine2"></div>
+                           
+                        </div>
+                        
+                    </header>
+                    
+                    <article>
+                        
+                        <div class="MainSectionTop">
+                            
+                       <h2>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget porttitor urna. Aenean ornare, 
+                       est quis posuere fringilla, metus libero mattis diam, nec ultrices ante sapien non justo. Duis consequat 
+                       lacus nulla, in viverra metus porttitor eget. Sed convallis nulla velit, sed aliquet erat ullamcorper eu. 
+                       Ut non urna id nulla sagittis pellentesque. Curabitur sollicitudin auctor leo, sed ullamcorper lectus 
+                       rhoncus eu. Nunc a ex laoreet, accumsan mauris ut, venenatis ante. Aenean tempor neque mi, at ultrices 
+                       justo finibus feugiat.
+                       </h2>
+                        </div>
+                        
+                           <div class="LesserSectionBottom">
+
+                           <div class="socialdivs">   
+                               
+                               <div class="fb">                                
+                                <div class="LogoTopLine"></div>   
+                                <a class="LinkMedia" href="#" target="blank">                                 
+                                   <i class="icon-facebook"></i>
+                                </a>   
+                                
+                               </div>
+                               <div class="yt">
+                                <div class="LogoTopLine"></div>
+                                <a class="LinkMedia" href="#" target="blank"> 
+                                   <i class="icon-youtube"></i>
+                                </a>
+                               </div>
+                               
+                               <div class="tw">
+                                 <div class="LogoTopLine"></div>
+                                 <a class="LinkMedia" href="#" target="blank"> 
+                                   <i class="icon-twitter"></i>
+                                 </a>
+                               </div>
+                               
+                               <div class="insta">
+                                 <div class="LogoTopLine"></div>
+                                 <a class="LinkMedia" href="#" target="blank"> 
+                                   <i class="icon-instagram"></i>
+                                 </a>  
+                               </div>
+
+                               <div id="Artykuly" style="clear: both;"> </div>
+
+                           </div>
+
+                           </div>
+                            
+
+                    </article>
+                        
+                    
+                 
+                </section>
+                
+                
+                <!-- ###### "Artkuły" ###### -->
+                <section>
+                    
+                    <header>
+                        
+                        <div class="SectionHeader">
+                            
+                           <div>Artykuły</div>
+                           <div class="StickyLine2"></div>
+                           
+                        </div>
+                        
+                    </header>
+                    
+                    
+                    <article>
+                        
+                        <div class="LesserSectionTop">
+
+                           <h2>
+                               Nie pozostajemy obojętni na wydarzenia mające miejsce w dzisiejszym świecie jak i w dalekiej
+                               przeszłości. Nie boimy się również kontrowersji.
+                           </h2>
+
+                        </div>
+                        
+                        <div class="MainSectionBottom">
+                            
+                            <div class="ArticleBox">
+                                
+                                <div class="ArticleLogo">
+                                    <div class="LogoTopLine"></div>
+                                    <a href="#" class="LinkMedia">
+                                       <i class="icon-doc"></i>
+                                    </a>
+                                </div>
+                                
+                                <div class="TextBox">
+                                    <h2>Zapraszamy do zobaczenia publikowanych przez nas artykułów.</h2>
+                                </div>
+                                
+                                <div id="Aktualnosci" style="clear: both;"></div>
+                            </div>
+                            
+                       
+                        </div>
+                        
+                           
+                            
+
+                    </article>
+                    
+                    
+                </section>
+                
+                
+                
+                <!-- ###### "Aktualności" ###### -->
+                <section>
+                    
+                    <header>
+                        
+                        <div class="SectionHeader">
+                            
+                           <div>Aktualności</div>
+                           <div class="StickyLine2"></div>
+                           
+                        </div>
+                        
+                    </header>
+                    
+                    
+                    <article>
+                        
+                        <div class="MainSectionTop">
+                            {% for post in object_list%}
+		                        <div class="News">
+                                
+                                    <div class="TopNews">
+                                        <a href="/blog/{{post.id}}">{{ post.date|date:"Y-m-d" }}</a>
+                                    </div>
+                                
+                                    <div class="NewsText">
+                                        <h3>
+                                            {{post.body}}
+                                        </h3> 
+                                    </div>
+                                </div>  
+	                        {% endfor %} 
+                        </div>
+                        
+                        <div class="LesserSectionBottom">
+                            
+                            <div class="SeeAllArticles">
+                                
+                                <div class="StickyLine3"></div>
+                                <div class="UnderlinedText">
+                                    <a href="/current/">Zobacz pełną listę aktualności</a>
+                                </div>
+                                
+                            </div>  
+                            
+                       
+                        </div>
+                        
+                        <div id="Kontakt"></div>
+
+                    </article>
+                    
+                    
+                </section>
+                
+                
+                
+                <!-- ###### "Kontakt" ###### -->
+                <section>
+                    
+                    <header>
+                        
+                        <div class="SectionHeader">
+                            
+                           <div>Kontakt</div>
+                           <div class="StickyLine2"></div>
+                           
+                        </div>
+                        
+                    </header>
+                    
+                    
+                    <article>
+                        
+                        <div class="MainSectionTop">
+                            
+                            <div class="ContactText">
+                                <h3>
+                                    Jeśli zaciekawiła cię nasza oganizacja, lub masz do nas jakiekolwiek pytania
+                                    skontaktuj się z nami. Staramy się odpisywać na wszystkie otrzymane przez nas wiadomości.
+                                </h3>
+                            </div>
+                        
+                            
+                        </div>
+                        
+                        <div class="LesserSectionBottom">
+                        
+                           <div class="ContactDataConteiner">
+                        
+                           <div class="mail">
+                               <i class="icon-mail"></i>
+                           </div>
+                               <div class="SideTile" id="Tile1">
+                                   TowarzystwoStudentów@gmail.com
+                               </div> 
+                            
+                           <div style="clear: both"></div>
+                           
+                           <div class="phone">
+                               <i class="icon-phone"></i>
+                           </div>
+                           
+                           <div class="SideTile" id="Tile2">
+                               894 356 211
+                           </div> 
+                            
+                           <div style="clear: both"></div>
+                           
+                           <div class="messenger">
+                               <i class="icon-comment"></i>
+                           </div>
+                           
+                           <div class="SideTile" id="Tile3">
+                               Przenieś mnie do Facebooka
+                           </div> 
+                            
+                           <div style="clear: both"></div>
+                        
+                           </div>
+                        </div>   
+                        
+                                                
+                    </article>
+                    
+                </section>
+                
+            </article>
+            
+        </main>
+<!--{% include 'info/smt.html' %}-->
+{% endblock %}
