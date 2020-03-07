@@ -7,7 +7,3 @@ class NewsFeed(models.Model):
     def __str__(self):
         return self.body
 
-class News(models.Model):
-    text = models.TextField()
-    title = models.TextField(max_length=100)
-

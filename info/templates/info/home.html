@@ -167,19 +167,23 @@
                     <article>
                         
                         <div class="MainSectionTop">
-                            {% for post in object_list%}
-		                        <div class="News">
-                                
-                                    <div class="TopNews">
-                                        <a href="/blog/{{post.id}}">{{ post.date|date:"Y-m-d" }}</a>
-                                    </div>
-                                
-                                    <div class="NewsText">
-                                        <h3>
-                                            {{post.body}}
-                                        </h3> 
-                                    </div>
-                                </div>  
+                            {% for post in object_list %}
+                                {% if forloop.counter <= 3 %}
+                                    
+                                    <div class="News">
+                                    
+                                        <div class="TopNews">
+                                            <a href="/blog/{{post.id}}">{{ post.date|date:"Y-m-d" }}</a>
+                                        </div>
+                                    
+                                        <div class="NewsText">
+                                            <h3>
+                                                {{post.body}}
+                                            </h3> 
+                                        </div>
+                                    </div>  
+
+                                {% endif %}        
 	                        {% endfor %} 
                         </div>
                         

@@ -1,17 +1,15 @@
 {% extends "info/header_footer.html" %}
 {% block content %}
-{% for post in object_list%}
 	<div class="News">
 
 		<div class="TopNews">
-			<a href="/current/{{post.id}}">{{ post.date|date:"Y-m-d" }}</a>
+			<a href="/current/{{post.id}}">{{ object.date|date:"Y-m-d" }}</a>
 		</div>
 
 		<div class="NewsText">
 			<h3>
-				{{post.body}}
+				{{object.body|safe|linebreaks}}
 			</h3> 
 		</div>
 	</div>  
-{% endfor %} 
 {% endblock %}

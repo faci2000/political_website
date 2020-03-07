@@ -28,7 +28,8 @@ SECRET_KEY = 'xdm#9-al)apaf(x9v(m-f(7sl!5n$==-&ct_9g$^g@u*v+ft!5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tspolska.herokuapp.com']
+ALLOWED_HOSTS = ['tspolska.herokuapp.com',
+'127.0.0.1']
 
 
 # Application definition
@@ -69,6 +70,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            # 'extensions':[
+            #     'jinja2.ext.i18n',
+            #     'jinja2.ext.loopcontrols',
+            # ],
             'debug': DEBUG,
         },
     },
