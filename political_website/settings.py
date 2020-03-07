@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['tspolska.herokuapp.com',
 INSTALLED_APPS = [
     'info',
     'current',
+    'articles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
