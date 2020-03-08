@@ -831,6 +831,8 @@ a.LinkMedia
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 30px;
+    border-top: 5px solid #751b1b ;	
+	
     
     -webkit-box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.95);
     -moz-box-shadow: 3px 3px 30px 5px rgba(0, 0, 0 , 0.95);
