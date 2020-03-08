@@ -906,5 +906,23 @@ input[type=submit]:hover
     margin-left: 10px;
 }
 
+#XButton
+{
+   margin: 0 10px;
+   border-style: none;
+   background-color: #171515;
+   font-size: 23px;
+   color: #fefefe;
+   
+   transition: all 0.2s ease-in-out;
+}
+
+#XButton:hover
+{
+    color: #8f2121;
+    transform: scale(1.5);
+    
+}
+
 
 
