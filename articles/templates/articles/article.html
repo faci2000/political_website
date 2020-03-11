@@ -15,7 +15,13 @@
 			</h3>
 			<h3>
 				Added: {{object.date|date:"Y-m-d"}}
-			</h3>  
+			</h3>
+			{% if object.articleimage_set %}
+			
+				{% for img in object.articleimage_set.all %}
+					<h3><img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}"/></h3>
+				{% endfor %}
+			{% endif %}
 		</div>
 	</div>  
 {% endblock %}
