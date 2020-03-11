@@ -83,11 +83,30 @@
             });
 
         </script>
-    
-       
-               
+	    
+	<script>
+            $(document).ready(function() {
+                $('.ShowLogin').click(function(){
+                  $('.LoginSection').css('display','block');
+                  $('.ShowLogin').css('color','#8f2121');
+                  $('.ShowLogin').css('font-weight','700');
+                });
+		    
+		    
+	    $(document).ready(function() {
+                $('#XButton').click(function(){
+                  $('.LoginSection').css('display','none');
+                  $('.ShowLogin').css('color','#fefefe');
+                  $('.ShowLogin').css('font-weight','400');
+                });                
+                
+            });    
+		    
+            });
+            
+        </script>
         
-        
+     
         
         <!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -138,14 +157,16 @@
         
         <div class="container">
             
-            <footer>
+           <footer>
                 <div class="StickyLine4"></div>
                 <div class="footer">
-                    2020 Towarzystwo Studentów Polskich &copy; | TowarzystwoStudentów@gmail.com | Dla członków Stowarzyszenia
-                    <i class="icon-vcard"></i>
+                    2020 Towarzystwo Studentów Polskich &copy; | TowarzystwoStudentów@gmail.com | 
+                    <button class="ShowLogin">Dla członków Stowarzyszenia
+                    <i class="icon-vcard"></i> </button>
                 </div>
             </footer>    
             
+                  
         </div>
                      
             

@@ -757,3 +757,174 @@ a.LinkMedia
 }
 
 
+.ShowLogin
+{
+    cursor: pointer;
+    
+    color: #fefefe;
+    font-size: 16px;
+    background-color:  #0a0b0b ;
+    border-style: none;   
+}
+
+
+/* ###### login menu ######*/
+
+.LoginSection
+{
+    display: none;
+}
+
+.LoginSectionTop
+{
+    padding: 25px;
+    background-color: #0e0f0f;
+    width: 600px;
+    
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left:  3px solid #0d0e0e ;
+    border-right:  3px solid #0d0e0e ;
+    
+    
+    text-align: justify; 
+}
+
+.LoginSectionBottom
+{
+   width: 620px;
+   background-color: #0b0c0c; 
+   padding: 15px;
+   
+   margin-left: auto;
+   margin-right: auto;
+   
+   border-left:  3px solid #0a0d0d ;
+   border-right:  3px solid #0a0d0d ;
+   
+   position: relative;
+}
+
+.LoginSectionBottom:after 
+{
+    content: '' ;
+    display: block;
+    width: 500px;
+    height: 100px;
+    box-shadow: 0 2px 60px rgba(0, 0, 0, .98);
+    position: absolute;
+    bottom: 0.3%;
+    left: 11.5%;
+    
+    z-index: -1;
+    
+    
+}
+
+#LoginTile
+{
+    background-color: #03060a;
+    width: 300px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-top: 5px solid #751b1b ;	
+	
+    
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.95);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(0, 0, 0 , 0.95);
+    box-shadow: 3px 3px 30px 5px rgba(0, 0, 0, 0.95);
+    
+}
+
+input[type=text],
+input[type=password]
+{
+	width: 300px;
+	background-color: #efefef;
+	color: #666666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus
+{
+	border: 2px solid #4c841c;
+	background-color: #e9f3e9;
+	color: #555555;
+}
+
+
+input[type=submit]
+{
+	width: 300px;
+	background-color: #3b730b;
+	font-size:20px;
+	color: #fefefe;
+	padding: 10px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+input[type=submit]:hover
+{
+	background-color: #4c841c;
+}
+
+.FAQ
+{
+    /* width: 300px; */
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    
+       
+}
+
+.Question
+{
+    color: #185e94;
+    margin: 5px 0;   
+}
+
+.Anwser
+{
+    color: #fefefe;
+    margin-left: 10px;
+}
+
+#XButton
+{
+   margin: 0 10px;
+   border-style: none;
+   background-color: #171515;
+   font-size: 23px;
+   color: #fefefe;
+   
+   transition: all 0.2s ease-in-out;
+}
+
+#XButton:hover
+{
+    color: #8f2121;
+    transform: scale(1.5);
+    
+}
+
+
+
