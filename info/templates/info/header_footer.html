@@ -26,6 +26,50 @@
         <script src="{% static 'info/js/jquery.scrollTo.min.js' %}"></script>
         
         <script>
+		
+		
+		//Scrolling articles
+            var Correction = 160;
+            var ScrollSpeed = 600;
+            
+           
+            
+            //link1
+            $(document).ready(function()
+            {
+                
+                 
+                $('#link1').click(function()
+                {
+                $('html,body').animate({
+                    scrollTop:$('#Onas').offset().top - Correction
+                }, ScrollSpeed);
+                });
+                
+                $('#link2').click(function()
+                {
+                $('html,body').animate({
+                    scrollTop:$('#Artykuly').offset().top - Correction
+                }, ScrollSpeed);
+                });
+                
+                $('#link3').click(function()
+                {
+                $('html,body').animate({
+                    scrollTop:$('#Aktualnosci').offset().top - Correction
+                }, ScrollSpeed);
+                });
+                
+                $('#link4').click(function()
+                {
+                $('html,body').animate({
+                    scrollTop:$('#Kontakt').offset().top - Correction
+                }, ScrollSpeed);
+                });
+                
+            }); 
+		
+	/*
             jQuery(function($)
             {
                 //scrolling reset
@@ -52,7 +96,9 @@
                 //  ########## second link group ########## //
                 
             }
-            );                                   
+            ); 
+	    */
+		
         </script>
         
         
