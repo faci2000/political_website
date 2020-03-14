@@ -566,7 +566,7 @@ h3
     height: 90px;
     float:left;
     
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .insta:hover
@@ -596,7 +596,7 @@ h3
     height: 90px;
     float:left;
     
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .fb:hover 
@@ -629,7 +629,7 @@ h3
     height: 90px;
     float:left;
     
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .yt:hover
@@ -658,7 +658,7 @@ h3
     height: 90px;
     float:left;
     
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .tw:hover
