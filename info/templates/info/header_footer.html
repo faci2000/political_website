@@ -69,42 +69,15 @@
                 
             }); 
 		
-	/*
-            jQuery(function($)
-            {
-                //scrolling reset
-                $.scrollTo(0);
-                
-                //  ########## first link group ########## //
-                
-                $('#link1').click(function() 
-                { $.scrollTo($('#Onas'), 500);}
-                );
-        
-                $('#link2').click(function() 
-                { $.scrollTo($('#Artykuly'), 500);}
-                );
-                
-                $('#link3').click(function() 
-                { $.scrollTo($('#Aktualnosci'), 500);}
-                );
-        
-                $('#link4').click(function() 
-                { $.scrollTo($('#Kontakt'), 500);}
-                );
-        
-                //  ########## second link group ########## //
-                
-            }
-            ); 
-	    */
+	
 		
         </script>
         
         
         
          <!-- Stick navigation menu script -->
-        <script src="jquery-1.11.3.min.js"></script>
+         {% load static %}
+        <script src="{% static 'info/js/jquery-1.11.3.min.js' %}"></script>
 	
         <script>
 
@@ -152,11 +125,7 @@
             
         </script>
         
-     
-        
-        <!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
+    
         
     </head>
     
