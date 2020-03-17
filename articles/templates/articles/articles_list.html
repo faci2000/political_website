@@ -5,7 +5,7 @@
             
             <div class="SectionHeader" >
                 
-                <div style="text-align: center">Artykuły</div>
+                <div style="text-align: center" >Artykuły</div>
                 <div class="StickyLine2"></div>
                 
             </div>
@@ -17,29 +17,39 @@
                 <ol class="chapters">
 
                     {% load static %}
-                    <script src="{% static 'info/js/javascript_index.js' %}"></script>
+                    <script src="{% static 'articles/js/show_hide.js' %}"></script>
 
-                    <li>
+                    
                         {% regroup articles by date.month as articles_list %}
+                        {% load static %}
+                        <script src="{% static 'articles/js/show_hide.js' %}"></script>
+                        <script src="{% static 'articles/js/date.js' %}"></script>
+                        <script src="{% static 'articles/js/scrollto.js' %}"></script>
                         {% for arts in articles_list %}
+                        <li>   
                             <div class="MainList">   
 
-                                {{ arts.grouper }}
-                                <button class="ScrollDown" id="LButton1" ><i class="icon-down-circled"></i></button>
+                                <script>date({{ arts.grouper }});</script> {{arts.list.0.date.year}}
+                                <button class="ScrollDown" onclick="show_hide($(this),'{{arts.list.0.date}}');"><i class="icon-down-circled"></i></button>
 
                             </div>
-                            <ul id="LList1">
+                            {% if forloop.first %}
+                                <ul >
+                            {% else %}
+                                <ul style="display: none;">
+                            {% endif %}
                             {% for article in arts.list %}
                                 
-                                <li> <a id="linkA1" href="/articles/{{article.id}}"> {{ article.title }}</a></li>                                  
+                                <li> <a href="#{{article.id}}"> {{ article.title }}</a></li>                                  
                                 
                             {% endfor %}
                             </ul>
+                        </li>
                         {% endfor %}
 
                         
                         
-                    </li>
+                    
                 </ol>
             </div>   
         </div>
@@ -49,50 +59,57 @@
 
     <article>  
         <section>
-            <div>
-                <header>
+            
+            {% for arts in articles_list %}
+            {% if forloop.first %}
+            <div id="{{arts.list.0.date}}" >
+            {%else%}
+            <div id="{{arts.list.0.date}}" style="display: none;">
+            {%endif%}
+            <header >
                 
-                    <div class="SectionHeader" >
+                    <div class="SectionHeader"  >
 
-                        <div style="text-align: center">Maj - Sierpień 2020</div>
+                        <div style="text-align: center"><script>date({{ arts.grouper }});</script> {{arts.list.0.date.year}}</div>
                         <div class="StickyLine2"></div>
 
                     </div>
                 
-                </header>
-                
-                <article>
-                    
+            </header>
+                {% for article in arts.list %}
+                <article id="{{article.id}}">
                     <div class="MainSectionBottom">
                         
-                        <div class="Article" id="linkA1section">
-                            <div class="ArticleDate">27.07.2020</div>
-                            <div class="ArticleTitle">Ciekawy Artykuł 1</div>
+                        <div class="Article">
+                            <div class="ArticleDate">{{article.date|date:"d.m.Y"}}</div>
+                            <div class="ArticleTitle">{{article.title}}</div>
                             
                             <div style="clear: both;"></div>
                             
                             <div class="ArticleIMG">
-                                <img src="#" alt="photo"/>
+                                {% for img in article.articleimage_set.all %}
+					                <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>
+				                {% endfor %}
                             </div>
+
                             <div class="ArticleText">                                        
                                 
                                 <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget porttitor urna. Aenean ornare, 
-                                est quis posuere fringilla, metus libero mattis diam, nec ultrices ante sapien non justo. Duis consequat
-                                </p>
-                                
-                                <p>
-                                lacus nulla, in viverra metus porttitor eget. Sed convallis nulla velit, sed aliquet erat ullamcorper eu. 
-                                Ut non urna id nulla sagittis pellentesque. Curabitur sollicitudin auctor leo, sed ullamcorper lectus 
-                                rhoncus eu. Nunc a ex laoreet, accumsan mauris ut, venenatis ante. Aenean tempor neque mi, at ultrices 
-                                justo finibus feugiat.
-                                </p>
+                                {{article.body|safe}}
+                                </p> 
 
                             </div>
                         </div>
+                        
                     </div>  
                 </article>
-            </div>
+                {% endfor %}
+                </div>
+            {% endfor %}
+                
+                
+                
+            
         </section>    
     </article>
 </main>
