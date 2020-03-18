@@ -5,231 +5,54 @@
 */
 
 
-/* #################### PHONE DISPLAY #################### */
-
 @media (max-width: 500px) {
+/* style dla 300px */
 
+}
+
+@media (min-width: 501px) {
+/* style dla pc */
+
+}
+
+body
+{
     
-/* ###### Main Scrolling menu ###### */
-
-.navigation
-{
-    height: 60px;
-    width: 900px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #0a0b0b;
-}
-
-.Logo
-{
-    float:left;       
-    height: 60px;
-    width: 60px;
-   
-}
-
-#MainLogo > img
-{
-  height: 60px;
-  width: 60px;  
-}
-
-.MenuButtons
-{
-    height: 60px;
-    width: 820px;
-}
-
-.MenuButtons > ol
-{
-    padding-top: 0;
+    background-color: #171515;
+    color: #fefefe;
     margin: 0;
     
-    list-style-type: none;
-    font-size: 22px;
-    font-weight: 700;
-    height: 60px;
-    width: 720px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
     
-    line-height: 200%;
-    
-    display: inline-block; /*centruje listę*/
-    
+    line-height: normal;
 }
 
-.MenuButtons > ol > li
+/* ########### Scrolling Menu ###########*/
+
+.sticky
 {
-    float: left;
-    width: 180px;
-    height: 60px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100; 
     
-    line-height: 200%;
-    
+    background-color: #0a0b0b;
+        
 }
 
-/* ###### main content container ###### */
-
-.container
-{  
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 300px;
-    background-color: green;
-}
-
-/* ###### Main Quote ######m*/
-
-.introduction
+.nav
 {
-    margin-top: 100px;
-    margin-bottom: 0px;
+    width: 100%;
     
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 7px;
     
-    width: 300px;
-    text-align: justify;
-    
-    line-height: 200%;
-    
-}
-
-h1
-{
-    font-size: 17px;
-    font-weight: 400;
-    
-}
-
-.SectionHeader
-{
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
-    
-    font-size: 28px;
-    font-weight: 400;
-    
+    background-color: #0a0b0b;
     text-align: center;
     
 }
 
-/* ###### Tiles design ###### */
-
-.MainSectionTop
-{
-    padding: 25px;
-    background-color: #0e0f0f;
-    width: 244px;
-    
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left:  3px solid #0d0e0e ;
-    border-right:  3px solid #0d0e0e ;
-    
-    
-    text-align: justify; 
-}
-
-.MainSectionBottom
-{
-    padding: 45px;
-    background-color: #0e0f0f;
-    width: 204px;
-    
-    
-    margin-left: auto;
-    margin-right: auto;
-    border-left:  3px solid #0d0e0e ;
-    border-right:  3px solid #0d0e0e ;
-    
-    
-    text-align: justify; 
-    
-    position:relative;
-}
-
-.MainSectionBottom:after 
-{
-    content: '' ;
-    display: block;
-    width: 300px;
-    height: 100px;
-    box-shadow: 0 2px 60px rgba(0, 0, 0, .98);
-    position: absolute;
-    bottom: 0.2%;
-    left: 11.5%;
-    
-    
-    z-index: -1;
-    
-    
-}
-
-.LesserSectionBottom
-{
-   width: 264px;
-   background-color: #0b0c0c; 
-   padding: 15px;
-   
-   margin-left: auto;
-   margin-right: auto;
-   
-   border-left:  3px solid #0a0d0d ;
-   border-right:  3px solid #0a0d0d ;
-   
-   position: relative;
-}
-
-.LesserSectionBottom:after 
-{
-    content: '' ;
-    display: block;
-    width: 200px;
-    height: 100px;
-    box-shadow: 0 2px 60px rgba(0, 0, 0, .98);
-    position: absolute;
-    bottom: -0.2%;
-    left: 11.5%;
-    
-    z-index: -1;
-    
-    
-}
-    
-
-
-.LesserSectionTop
-{
-   width: 294px;
-   background-color: #0b0c0c; 
-   padding: 30px;
-   
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: 15px;
-   
-   border-left:  3px solid #0a0d0d ;
-   border-right:  3px solid #0a0d0d ;
-   
-   text-align: justify; 
-}
-
-}
-
-
-
-
-/* #################### PC DISPLAY #################### */
-
-@media (min-width: 501px) {
-
-/* Main menu*/
 .navigation
 {
     height: 60px;
@@ -287,17 +110,55 @@ h1
     
 }
 
-/* Main menu*/
+.MenuButtons > ol > li:hover
+{
+    background-color: #0e0f0f;
+}
+
+ol a
+{
+    color: #fefefe;
+    text-decoration: none;
+    display: block;
+    
+    padding-top: 6px;
+    
+    transition: all 0.2s ease-in-out;
+    
+}
+
+
+.MenuButtons > ol > li:hover > a
+{
+   color: #8f2121;
+   
+   
+   /*prefixes for older browsers*/
+   -webkit-transform: scale(1.25);
+   -ms-transform: scale(1.25);
+   transform: scale(1.25);
+}
+
+
+
+.StickyLine
+{
+    margin-top: 7px;
+    width: 100%;
+    height: 5px;
+    background-color: #751b1b;  
+    border-bottom: 1px solid #2b0303 ;
+}
+
+
+/* ########### Main Section ###########*/
+
 .container
 {  
     margin-left: auto;
     margin-right: auto;
-    
-    width: 800px;
-    background-color: purple;
 }
 
-/* Main Quote*/
 .introduction
 {
     margin-top: 150px;
@@ -321,6 +182,34 @@ h1
     
 }
 
+.OnasText
+{
+    font-size: 24px;
+    font-weight: 400;
+    color: #fefefe;
+    
+    text-align: justify;
+    
+}
+
+h2
+{
+    font-size: 24px;
+    font-weight: 400;
+    color: #fefefe;
+}
+
+h3
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fefefe;
+    
+    padding: 0px;
+    margin: 5px;
+    
+}
+
 .SectionHeader
 {
     width: 650px;
@@ -334,6 +223,17 @@ h1
     text-align: left;
     
 }
+
+.StickyLine2
+{
+    margin-top: 6px;
+    width: 100%;
+    height: 4px;
+    background-color: #751b1b;  
+    border-top: 2px solid #2b0303 ;
+}
+
+/* ******* Tiles design ******* */
 
 .MainSectionTop
 {
@@ -434,143 +334,6 @@ h1
    
    text-align: justify; 
 }
-
-
-}
-
-
-
-
-
-
-
-
-body
-{
-    
-    background-color: #171515;
-    color: #fefefe;
-    margin: 0;
-    
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    
-    line-height: normal;
-}
-
-/* ########### Scrolling Menu ###########*/
-
-.sticky
-{
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 100; 
-    
-    background-color: #0a0b0b;
-        
-}
-
-.nav
-{
-    width: 100%;
-    
-    padding-top: 7px;
-    
-    background-color: #0a0b0b;
-    text-align: center;
-    
-}
-
-.MenuButtons > ol > li:hover
-{
-    background-color: #0e0f0f;
-}
-
-ol a
-{
-    color: #fefefe;
-    text-decoration: none;
-    display: block;
-    
-    padding-top: 6px;
-    
-    transition: all 0.2s ease-in-out;
-    
-}
-
-
-.MenuButtons > ol > li:hover > a
-{
-   color: #8f2121;
-   
-   
-   /*prefixes for older browsers*/
-   -webkit-transform: scale(1.25);
-   -ms-transform: scale(1.25);
-   transform: scale(1.25);
-}
-
-
-
-.StickyLine
-{
-    margin-top: 7px;
-    width: 100%;
-    height: 5px;
-    background-color: #751b1b;  
-    border-bottom: 1px solid #2b0303 ;
-}
-
-
-/* ########### Main Section ###########*/
-
-.container
-{  
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.OnasText
-{
-    font-size: 24px;
-    font-weight: 400;
-    color: #fefefe;
-    
-    text-align: justify;
-    
-}
-
-h2
-{
-    font-size: 24px;
-    font-weight: 400;
-    color: #fefefe;
-}
-
-h3
-{
-    font-size: 20px;
-    font-weight: 400;
-    color: #fefefe;
-    
-    padding: 0px;
-    margin: 5px;
-    
-}
-
-
-.StickyLine2
-{
-    margin-top: 6px;
-    width: 100%;
-    height: 4px;
-    background-color: #751b1b;  
-    border-top: 2px solid #2b0303 ;
-}
-
-
 
 .ArticleBox
 {
