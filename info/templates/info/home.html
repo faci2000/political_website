@@ -7,7 +7,7 @@
                 <header>
                     
                     <div >
-                    <h1class="introduction"> 
+                    <h1 class="introduction"> 
                        Czym byłeś wczoraj? Endekiem? Pepeesowcem? Nic mnie to nie obchodzi.
                        Wiem tylko to, że wczoraj byliśmy słabi, a dziś musimy być mocni. ~ Jan Hoppe  
                     </h1>
@@ -182,15 +182,14 @@
                     
                     <article>
                         
-                        <div  class="ContactText">
-                                <h3>
+                        <div class="MainSectionTop">
+                        <div  class="OnasText">
+                                <h2>
                                 Nie ma polityczności bez aktywizmu. Jako Towarzystwo Studentów Polskich działamy na 
                                 wielu płaszczyznach, nie bojąc się skandali i kontrowersji. Nie wypieramy się naszych 
                                 oglądów i działań. Zapoznaj się z nimi. 
-                                </h3>
+                                </h2>
                         </div>
-                        
-                        <div class="MainSectionTop">
                             {% for post in object_list %}
                                
                                     
@@ -201,9 +200,9 @@
                                         </div>
                                     
                                         <div class="NewsText">
-                                            <h3>
+                                            <h2>
                                                 {{post.body}}
-                                            </h3> 
+                                            </h2> 
                                         </div>
                                     </div>    
 	                        {% endfor %} 
