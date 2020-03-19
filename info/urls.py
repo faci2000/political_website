@@ -8,6 +8,6 @@ urlpatterns = [
     #url('about/',views.about, name='about'),
     #url('contact/',views.contact, name='contact'),
     path('', ListView.as_view(
-                                    queryset=NewsFeed.objects.all().order_by("-date")[:25],
+                                    queryset=NewsFeed.objects.all().order_by("-date")[:3],
                                     template_name="info/home.html")),
 ]

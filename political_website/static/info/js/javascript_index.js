@@ -1,119 +1,119 @@
 //Scrolling articles
 
-            var Correction = 160;
-            var ScrollSpeed = 600;
+var Correction = 160;
+var ScrollSpeed = 600;
 
 
 
-            //link1
-            $(document).ready(function()
-            {
+//link1
+$(document).ready(function()
+{
+    
+     
+    $('#link1').click(function()
+    {
+    $('html,body').animate({
+        scrollTop:$('#Onas').offset().top - Correction
+    }, ScrollSpeed);
+    });
+    
+    $('#link2').click(function()
+    {
+    $('html,body').animate({
+        scrollTop:$('#Artykuly').offset().top - Correction
+    }, ScrollSpeed);
+    });
+    
+    $('#link3').click(function()
+    {
+    $('html,body').animate({
+        scrollTop:$('#Aktualnosci').offset().top - Correction
+    }, ScrollSpeed);
+    });
+    
+    $('#link4').click(function()
+    {
+    $('html,body').animate({
+        scrollTop:$('#Kontakt').offset().top - Correction
+    }, ScrollSpeed);
+    });
+    
+}); 
 
 
-                $('#link1').click(function()
-                {
-                $('html,body').animate({
-                    scrollTop:$('#Onas').offset().top - Correction
-                }, ScrollSpeed);
-                });
+/*
+jQuery(function($)
+{
+    //scrolling reset
+    $.scrollTo(0);
+    
+    //  ########## first link group ########## //
+    
+    $('#link1').click(function() 
+    { $.scrollTo($('#Onas'), 500);}
+    );
 
-                $('#link2').click(function()
-                {
-                $('html,body').animate({
-                    scrollTop:$('#Artykuly').offset().top - Correction
-                }, ScrollSpeed);
-                });
+    $('#link2').click(function() 
+    { $.scrollTo($('#Artykuly'), 500);}
+    );
+    
+    $('#link3').click(function() 
+    { $.scrollTo($('#Aktualnosci'), 500);}
+    );
 
-                $('#link3').click(function()
-                {
-                $('html,body').animate({
-                    scrollTop:$('#Aktualnosci').offset().top - Correction
-                }, ScrollSpeed);
-                });
+    $('#link4').click(function() 
+    { $.scrollTo($('#Kontakt'), 500);}
+    );
 
-                $('#link4').click(function()
-                {
-                $('html,body').animate({
-                    scrollTop:$('#Kontakt').offset().top - Correction
-                }, ScrollSpeed);
-                });
+}
+);
 
-            });
-
-
-            /*
-            jQuery(function($)
-            {
-                //scrolling reset
-                $.scrollTo(0);
-
-                //  ########## first link group ########## //
-
-                $('#link1').click(function()
-                { $.scrollTo($('#Onas'), 500);}
-                );
-
-                $('#link2').click(function()
-                { $.scrollTo($('#Artykuly'), 500);}
-                );
-
-                $('#link3').click(function()
-                { $.scrollTo($('#Aktualnosci'), 500);}
-                );
-
-                $('#link4').click(function()
-                { $.scrollTo($('#Kontakt'), 500);}
-                );
-
-            }
-            );
-
-             */
+ */  
 
 //Sticky Navigation
 
 
 
-            $(document).ready(function() {
-            var NavY = $('.nav').offset().top;
+$(document).ready(function() {
+var NavY = $('.nav').offset().top;
 
-            var stickyNav = function(){
-            var ScrollY = $(window).scrollTop();
+var stickyNav = function(){
+var ScrollY = $(window).scrollTop();
 
-            if (ScrollY > NavY) {
-                    $('.nav').addClass('sticky');
-            } else {
-                    $('.nav').removeClass('sticky');
-            }
-            };
+if (ScrollY > NavY) { 
+        $('.nav').addClass('sticky');
+} else {
+        $('.nav').removeClass('sticky'); 
+}
+};
 
-            stickyNav();
+stickyNav();
 
-            $(window).scroll(function() {
-                    stickyNav();
-            });
-            });
+$(window).scroll(function() {
+        stickyNav();
+});
+});
 
 //Login service
 
-            $(document).ready(function() {
-                    $('.ShowLogin').click(function(){
-                      $('.LoginSection').css('display','block');
-                      $('.ShowLogin').css('color','#8f2121');
-                      $('.ShowLogin').css('font-weight','700');
-                    });
+$(document).ready(function() {
+        $('.ShowLogin').click(function(){
+          $('.LoginSection').css('display','block');
+          $('.ShowLogin').css('color','#8f2121');
+          $('.ShowLogin').css('font-weight','700');
+        });
 
 
-                });
+    });
 
-                $(document).ready(function() {
-                    $('#XButton').click(function(){
-                      $('.LoginSection').css('display','none');
-                      $('.ShowLogin').css('color','#fefefe');
-                      $('.ShowLogin').css('font-weight','400');
-                    });
+    $(document).ready(function() {
+        $('#XButton').click(function(){
+          $('.LoginSection').css('display','none');
+          $('.ShowLogin').css('color','#fefefe');
+          $('.ShowLogin').css('font-weight','400');
+        });                
 
-                });
+    });
 
 
 //Scrolling articles

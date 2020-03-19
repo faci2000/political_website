@@ -1,20 +1,117 @@
 {% extends "info/header_footer.html" %}
 {% block content %}
-{% for post in articles%}
-	<div class="News">
+<main>  
+    <header>
+            
+            <div class="SectionHeader" >
+                
+                <div style="text-align: center" >Artykuły</div>
+                <div class="StickyLine2"></div>
+                
+            </div>
+            
+    </header>
+    <nav>
+        <div class="MainSectionBottom">
+            <div id="ContentTable">
+                <ol class="chapters">
 
-		<div class="TopNews">
-			<a href="/articles/{{post.id}}">{{ post.title }}</a>
-		</div>
+                    {% load static %}
+                    <script src="{% static 'articles/js/show_hide.js' %}"></script>
 
-		<div class="NewsText">
-			<h3>
-				{{post.body|safe}}
-			</h3> 
-			<h3>
-				~ {{post.author}}
-			</h3> 
-		</div>
-	</div>  
-{% endfor %}
+                    
+                        {% regroup articles by date.month as articles_list %}
+                        {% load static %}
+                        <script src="{% static 'articles/js/show_hide.js' %}"></script>
+                        <script src="{% static 'articles/js/date.js' %}"></script>
+                        <script src="{% static 'articles/js/scrollto.js' %}"></script>
+                        {% for arts in articles_list %}
+                        <li>   
+                            <div class="MainList">   
+
+                                <script>date({{ arts.grouper }});</script> {{arts.list.0.date.year}}
+                                <button class="ScrollDown" onclick="show_hide($(this),'{{arts.list.0.date}}');"><i class="icon-down-circled"></i></button>
+
+                            </div>
+                            {% if forloop.first %}
+                                <ul >
+                            {% else %}
+                                <ul style="display: none;">
+                            {% endif %}
+                            {% for article in arts.list %}
+                                
+                                <li> <a href="#{{article.id}}"> {{ article.title }}</a></li>                                  
+                                
+                            {% endfor %}
+                            </ul>
+                        </li>
+                        {% endfor %}
+
+                        
+                        
+                    
+                </ol>
+            </div>   
+        </div>
+    </nav>
+
+
+
+    <article>  
+        <section>
+            
+            {% for arts in articles_list %}
+            {% if forloop.first %}
+            <div id="{{arts.list.0.date}}" >
+            {%else%}
+            <div id="{{arts.list.0.date}}" style="display: none;">
+            {%endif%}
+            <header >
+                
+                    <div class="SectionHeader"  >
+
+                        <div style="text-align: center"><script>date({{ arts.grouper }});</script> {{arts.list.0.date.year}}</div>
+                        <div class="StickyLine2"></div>
+
+                    </div>
+                
+            </header>
+                {% for article in arts.list %}
+                <article id="{{article.id}}">
+                    <div class="MainSectionBottom">
+                        
+                        <div class="Article">
+                            <div class="ArticleDate">{{article.date|date:"d.m.Y"}}</div>
+                            <div class="ArticleTitle">{{article.title}}</div>
+                            
+                            <div style="clear: both;"></div>
+                            
+                            <div class="ArticleIMG">
+                                {% for img in article.articleimage_set.all %}
+					                <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>
+				                {% endfor %}
+                            </div>
+
+                            <div class="ArticleText">                                        
+                                
+                                <p>
+                                {{article.body|safe}}
+                                </p> 
+
+                            </div>
+                        </div>
+                        
+                    </div>  
+                </article>
+                {% endfor %}
+                </div>
+            {% endfor %}
+                
+                
+                
+            
+        </section>    
+    </article>
+</main>
+
 {% endblock %}

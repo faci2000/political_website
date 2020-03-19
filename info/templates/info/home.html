@@ -140,7 +140,7 @@
                                 <div class="ArticleLogo">
                                     <div class="LogoTopLine"></div>
 					
-                                    <a href="Articles.html" class="LinkMedia">
+                                    <a href="/articles/" class="LinkMedia">
                                        <i class="icon-doc"></i>
                                     </a>
                                 </div>
@@ -192,7 +192,7 @@
                         
                         <div class="MainSectionTop">
                             {% for post in object_list %}
-                                {% if forloop.counter <= 3 %}
+                               
                                     
                                     <div class="News">
                                     
@@ -207,7 +207,7 @@
                                         </div>
                                     </div>  
 
-                                {% endif %}        
+                                }        
 	                        {% endfor %} 
                         </div>
                         
@@ -375,5 +375,4 @@
                     
                 </section>
 
-<!--{% include 'info/smt.html' %}-->
 {% endblock %}
