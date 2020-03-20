@@ -62,6 +62,13 @@ body
    
 }
 
+.LogoGo
+{
+
+    height: 150px;
+    width: 160px;
+}
+
 .MainL
 {
     height: 150px;
@@ -89,11 +96,6 @@ body
     
 }
 
-.MainL > img
-{
-    height: 150px;
-    width: 160px;
-}
 
 .MainLogo > img
 {
@@ -1172,8 +1174,15 @@ ol > li > ul > li
 
     .container
     {
-        width: 900px;   
+        width: 900px;  
+	  
     }
+	
+	.Hcorrector
+	{
+		min-height: 2500px; /* test */ 
+	}
+		
     
     .SideTile
     {
