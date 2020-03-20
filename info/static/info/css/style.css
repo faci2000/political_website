@@ -1175,8 +1175,14 @@ ol > li > ul > li
     .container
     {
         width: 900px;  
-	min-height: 4000px; /* test */   
+	  
     }
+	
+	.Hcorrector
+	{
+		min-height: 2500px; /* test */ 
+	}
+		
     
     .SideTile
     {
