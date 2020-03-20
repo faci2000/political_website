@@ -5,15 +5,6 @@
 */
 
 
-@media (max-width: 500px) {
-/* style dla 300px */
-
-}
-
-@media (min-width: 501px) {
-/* style dla pc */
-
-}
 
 body
 {
@@ -71,7 +62,40 @@ body
    
 }
 
-#MainLogo > img
+.MainL
+{
+    height: 150px;
+    width: 160px;
+    
+    margin-top: 50px;
+    
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.MobileSign
+{
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    height: 20px;
+    width: 160px;
+    background-color:  #0e0f0f ;
+    
+    margin-left: auto;
+    margin-right: auto;   
+    
+    color: #fefefe;
+    
+}
+
+.MainL > img
+{
+    height: 150px;
+    width: 160px;
+}
+
+.MainLogo > img
 {
   height: 60px;
   width: 60px;  
@@ -787,6 +811,16 @@ a.LinkMedia
     
 }
 
+.footerPH
+{
+        height: 60px;
+        font-size: 18px;
+        padding: 5px;
+        background-color: #0a0b0b;
+        text-align: center;
+        padding: 30px; 
+}
+
 .ShowLogin
 {
     cursor: pointer;
@@ -1106,4 +1140,88 @@ ol > li > ul > li
 .NewsDiv
 {
     margin: 30px 0;
+}
+
+
+
+@media (max-width: 800px) 
+{
+    /* #### display elements #### */
+    
+    #navigatorPC
+    {
+        display: none;
+    }
+    
+    #navigatorPH
+    {
+        display: block;
+    }
+    
+    #footer1
+    {
+        display: none;
+    }
+    
+    #footer2
+    {
+        display: block;
+    }
+    
+    /* ####  end of display elements #### */
+
+    .container
+    {
+        width: 900px;   
+    }
+    
+    .SideTile
+    {
+        display: block;
+    }
+    
+    
+    .introduction
+    {
+        width: 650px;
+        margin-top: 80px;
+    }
+    
+    h1
+    {
+        font-weight: 700;
+    }
+    
+    .ContactDataConteiner
+    {
+       margin-left: 70px;
+    }
+    
+    
+    
+    
+}
+
+@media (min-width: 801px)
+{
+/* style for pc */
+    #navigatorPH
+    {
+        display: none;
+    }
+    
+    #navigatorPC
+    {
+        display: block;
+    }
+    
+    #footer1
+    {
+        display: block;
+    }
+    
+    #footer2
+    {
+        display: none;
+    }
 }
