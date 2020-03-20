@@ -36,7 +36,7 @@
 
                             </div>
                             {% if forloop.first %}
-                                <ul >
+                                <ul style="display: block;">
                             {% else %}
                                 <ul style="display: none;">
                             {% endif %}
@@ -87,18 +87,19 @@
                             <div class="ArticleTitle">{{article.title}}</div>
                             
                             <div style="clear: both;"></div>
-                            
-                            <div class="ArticleIMG">
-                                {% for img in article.articleimage_set.all %}
-					                <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>
-				                {% endfor %}
-                            </div>
-
+                            {% if article.articleimage_set.all %}
+                                <div class="ArticleIMG">
+                                    <img src="{{article.articleimage_set.all.0.image.url}}" width="{{article.articleimage_set.all.0.width}}" height="{{article.articleimage_set.all.0.height}}" alt="photo"/>
+                                </div>
+                            {% endif %}
                             <div class="ArticleText">                                        
                                 
                                 <p>
                                 {{article.body|safe}}
                                 </p> 
+                                <p><a href="/articles/{{article.id}}">
+                                Zobacz więcej...
+                                </a></p>
 
                             </div>
                         </div>

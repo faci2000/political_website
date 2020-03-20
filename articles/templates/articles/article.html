@@ -1,12 +1,18 @@
+
 {% extends "info/header_footer.html" %}
 {% block content %}
-	<div class="News">
+
+
+                    
+                       
                         
 <section>
 
+    <div class="MainSectionBottom">
+                        
         <div class="Article" id="linkA1section">
 
-            <div class="ArticleDate">{{object.date|date:"Y-m-d"}}</div>
+            <div class="ArticleDate">{{object.date|date:"d.m.Y"}}</div>
             
             <header>
                 <div class="ArticleTitle">{{object.title}}</div>
@@ -15,32 +21,26 @@
             <div style="clear: both;"></div>
             
             <article>
-                <div class="ArticleIMG">
-                    {% for img in object.articleimage_set.all %}
-					<img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>
-				    {% endfor %}
-                </div>
-                <div class="ArticleText">                                        
-
-                       {{object.body|safe}}
-
-                       <p>{{object.author}}</p>
-
-                </div>
+            {% for img in object.articleimage_set.all %}
+                {%if forloop.first%}
+                    <div class="ArticleIMG">	                
+                        <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
+                    </div>
+                    <div class="ArticleText">                                        
+                         <p>
+                            {{object.body|safe}}
+                        </p> 
+                    </div>
+                {% else %}
+                    <div class="ArticleIMG">	                
+                        <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
+                    </div>
+                {% endif %}
+            {% endfor %}
             </article>
         </div>
-	</div>  
-        </div>
+    </div>
 
 </section>    
                             
-                            
-    
-                        
-    
-                    
-                
-
-
-<!--{% include 'info/smt.html' %}-->
 {% endblock %}

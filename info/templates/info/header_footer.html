@@ -51,13 +51,21 @@
                         </div>
 
                         <div class="MenuButtons">
-
-                         <ol>                   
-                           <li><a id="link1" href="#">O nas</a></li>   
-                           <li><a id="link2" href="#">Artykuły</a></li>                     
-                           <li><a id="link3" href="#">Aktualności</a></li>   
-                           <li><a id="link4" href="#">Kontakt</a></li>
-                        </ol>
+                        {%if request.path == "/" %}
+                            <ol>                   
+                                <li><a id="link1" href="#">O nas</a></li>   
+                                <li><a id="link2" href="#">Artykuły</a></li>                     
+                                <li><a id="link3" href="#">Aktualności</a></li>   
+                                <li><a id="link4" href="#">Kontakt</a></li>
+                            </ol>
+                        {% else %}
+                            <ol>                   
+                                <li><a href="/">O nas</a></li>   
+                                <li><a href="/articles">Artykuły</a></li>                     
+                                <li><a href="/current">Aktualności</a></li>   
+                                <li><a href="/">Kontakt</a></li>
+                            </ol>
+                        {%endif%}
 
                        </div>
 
@@ -114,7 +122,7 @@
 
                         <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" >
 
-                        <input type="submit" value="Zaloguj się">
+                        <a ><input href="/admin" type="submit" value="Zaloguj się"></a>
     
                         </form>
                     </div>
