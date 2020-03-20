@@ -1233,4 +1233,9 @@ ol > li > ul > li
     {
         display: none;
     }
+	
+	.Hcorrector
+	{
+		min-height: 1400px; /* test */ 
+	}
 }
