@@ -1180,7 +1180,7 @@ ol > li > ul > li
 	
 	.Hcorrector
 	{
-		min-height: 1800px; /* test */ 
+		min-height: 1200px; /* test */ 
 	}
 		
     
@@ -1236,6 +1236,6 @@ ol > li > ul > li
 	
 	.Hcorrector
 	{
-		min-height: 1400px; /* test */ 
+		min-height: 1300px; /* test */ 
 	}
 }
