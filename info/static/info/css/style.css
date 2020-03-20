@@ -1201,12 +1201,7 @@ ol > li > ul > li
     {
         display: block;
     }
-	
-    #AlternativeNav
-    {
-        display: none;
-    }	
-    
+		   
     #footer1
     {
         display: none;
@@ -1265,11 +1260,6 @@ ol > li > ul > li
     {
         display: none;
     }
-	
-    .AlternativeNav
-    {
-        display: block;
-    }	
     
     #navigatorPC
     {
