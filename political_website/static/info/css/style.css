@@ -89,7 +89,9 @@ body
     
 }
 
-.MainL > a > img
+
+
+.MainLink > img
 {
     height: 150px;
     width: 160px;
