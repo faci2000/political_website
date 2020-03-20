@@ -65,8 +65,8 @@
 .icon-phone:before { content: '\e807'; font-size: 40px; margin-top: 15px; margin-left: 13px; } /* '' */
 .icon-menu:before { content: '\e808'; } /* '' */
 .icon-vcard:before { content: '\e809'; } /* '' */
-.icon-down-circled:before { content: '\e80a'; } /* '' */
-.icon-up-circled:before { content: '\e80b'; } /* '' */
+.icon-down-circled:before { content: '\e80a'; font-size: 23px;} /* '' */
+.icon-up-circled:before { content: '\e80b'; font-size: 23px;} /* '' */
 .icon-user:before { content: '\f061'; } /* '' */
 .icon-twitter:before { content: '\f309'; font-size: 55px; margin-top: 15px; margin-left: 15px; } /* '' */
 .icon-facebook:before { content: '\f30c'; font-size: 55px; margin-top: 15px; margin-left: 15px; } /* '' */
