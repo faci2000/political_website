@@ -1175,7 +1175,7 @@ ol > li > ul > li
     .container
     {
         width: 900px;  
-	min-width: 3000px; /* test */   
+	min-height: 2000px; /* test */   
     }
     
     .SideTile
