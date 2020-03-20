@@ -1144,6 +1144,48 @@ ol > li > ul > li
     margin: 30px 0;
 }
 
+/* ########## Alternative menu ########## */
+
+.AltButton
+{
+    float: left;
+    width: 340px;
+    height: 60px;
+    font-size: 24px;
+    
+    text-align: center;
+    background-color:  #0b0c0c;
+    transition: all 0.2s ease-in-out;
+    
+    cursor: pointer;
+    
+}
+
+.altnavdiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+   
+    width: 400px;
+    line-height: 55px;
+}
+
+.AltButton:hover
+{
+    color: #dcdcdc;
+    background-color: #751b1b; 
+}
+
+.BackToMainB
+{
+    text-decoration: none;
+    color: #fefefe;
+}
+
+
+
+
 
 
 @media (max-width: 800px) 
@@ -1159,6 +1201,11 @@ ol > li > ul > li
     {
         display: block;
     }
+	
+    .AlternativeNav
+    {
+        display: none;
+    }	
     
     #footer1
     {
@@ -1218,6 +1265,11 @@ ol > li > ul > li
     {
         display: none;
     }
+	
+    .AlternativeNav
+    {
+        display: block;
+    }	
     
     #navigatorPC
     {
