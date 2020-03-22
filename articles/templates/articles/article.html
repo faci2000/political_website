@@ -24,18 +24,38 @@
             {% if  object.articleimage_set.all%}
                 {% for img in object.articleimage_set.all %}
                     {%if forloop.first%}
-                        <div class="ArticleIMG">	                
-                            <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
-                        </div>
+                        {% if  img.get_ratio_display == "pionowo"%}
+                            <div class="Portrait">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% elif img.get_ratio_display == "poziome"%}
+                            <div class="Landscape">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% else %}
+                            <div class="Square">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% endif %}
                         <div class="ArticleText">                                        
                             <p>
                                 {{object.body|safe}}
                             </p> 
                         </div>
                     {% else %}
-                        <div class="ArticleIMG">	                
-                            <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
-                        </div>
+                        {% if  img.get_ratio_display == "pionowo"%}
+                            <div class="Portrait">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% elif img.get_ratio_display == "poziome"%}
+                            <div class="Landscape">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% else %}
+                            <div class="Square">
+                                <img src="{{img.image.url}}"  alt="photo"/>
+                            </div>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
             {% else %}

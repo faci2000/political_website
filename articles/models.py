@@ -13,8 +13,19 @@ class Article(models.Model):
 
 class ArticleImage(models.Model):
     image = models.ImageField(upload_to='images/%Y/%m')
-    width = models.IntegerField()
-    height = models.IntegerField()
+    PORTRAIT = 'pionowe'
+    LANDSCAPE = 'poziome'
+    SQUARE = 'kwadrat'
+    RATIO = [
+        (PORTRAIT,'pionowe'),
+        (LANDSCAPE, 'poziome'),
+        (SQUARE,'kwadratowe')
+    ]
+    ratio = models.CharField(
+        max_length=15,
+        choices=RATIO,
+        default=PORTRAIT,
+    )
     article = models.ForeignKey(Article,on_delete=models.CASCADE)
     def __str__(self):
         return self.image.url

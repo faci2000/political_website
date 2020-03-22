@@ -10,5 +10,5 @@ class ArticleForm(forms.ModelForm):
 
 ArticleFormSet = inlineformset_factory(
     Article,ArticleImage,form=ArticleForm,
-    fields=['image','width','height'],
+    fields=['image','ratio'],
     extra=1,can_delete=True)

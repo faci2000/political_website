@@ -3,12 +3,245 @@
 {% block title %}{{ title }} | TSP administration{% endblock %}
 
 {% block extrastyle %}
+<style>
+    body
+    {
+        background: #171515 !important;
+    }
+    ul.messagelist li {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px 10px 10px 65px;
+    margin: 0 0 10px 0;
+    background: #333 url(../img/icon-yes.svg) 40px 12px no-repeat !important;
+    background-size: 16px auto;
+    color: #0e0f0f !important;
+}
+    .form-row img, .form-row input {
+    vertical-align: middle;
+    color: #fefefe !important;
+    }
+    #user-tools a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fefefe !important;
+    }
+    div.breadcrumbs a {
+    color: #fefefe !important;
+    }
+    #branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: #fefefe !important;
+    }
+    a:link, a:visited  
+    {
+    color: #fefefe !important;
+    text-decoration: none;
+    }
+    .calendar td a, .timelist a {
+    display: block;
+    font-weight: 400;
+    padding: 6px;
+    text-decoration: none;
+    color: #444;
+    color: #fefefe !important;
+    }
+    #header
+    {
+        background: #751b1b;
+    }
+    h1 
+    {
+        margin: 0 0 20px;
+        font-weight: 300;
+        font-size: 20px;
+        color: #fefefe;
+    }
+    a:link, a:visited 
+    {
+        color: #fefefe;
+        text-decoration: none;
+    }
 
+
+    .module h2, .module caption, .inline-group h2 
+    {
+        margin: 0;
+        padding: 8px;
+        font-weight: 400;
+        font-size: 13px;
+        text-align: left;
+        background: #751b1b !important;
+        color: #fefefe !important;
+    }
+    #changelist .paginator {
+    color: #fefefe !important;
+    border-bottom: 1px solid #eee;
+    background: #751b1b !important;
+    overflow: hidden;
+}
+
+    #changelist .actions {
+    padding: 10px;
+    background: #751b1b !important;
+    border-top: none;
+    border-bottom: none;
+    line-height: 24px;
+    color: #999;
+}
+.calendar-cancel {
+    margin: 0;
+    padding: 4px 0;
+    font-size: 12px;
+    background: #751b1b !important;
+    border-top: 1px solid #ddd;
+    color: #fefefe !important;
+}
+p, ol, ul, dl {
+    margin: .2em 0 .8em 0;
+    color: #fefefe !important;
+}
+h2{
+    color: #fefefe !important;
+}
+.form-row img, .form-row input {
+    vertical-align: middle;
+    color: #0e0f0f !important;
+}
+#changelist .actions .button {
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
+    cursor: pointer;
+    height: 24px;
+    line-height: 1;
+    padding: 4px 8px;
+    margin: 0;
+    color: #fefefe !important;
+}
+
+    div.breadcrumbs 
+    {
+        background: #751b1b;
+        padding: 10px 40px;
+        border: none;
+        font-size: 14px;
+        color: #fefefe;
+        text-align: left;
+    }
+    #changelist #toolbar {
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background: #751b1b !important;
+    color: #333 !important;
+    }
+    #changelist-filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 240px;
+    background: #0e0f0f !important;
+    border-left: none;
+    margin: 0;
+    color: #fefefe !important;
+    }
+    input[type="submit"], button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #333 !important;
+    }
+    #changelist #toolbar form input[type="submit"] {
+    border: 1px solid #ccc;
+    padding: 2px 10px;
+    margin: 0;
+    vertical-align: middle;
+    background: #333 !important;
+    box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
+    cursor: pointer;
+    color: #fefefe !important;
+    }
+    .aligned label {
+    display: block;
+    padding: 4px 10px 0 0;
+    float: left;
+    width: 160px;
+    word-wrap: break-word;
+    line-height: 1;
+    color: #fefefe !important;
+    }
+    .form-row img, .form-row input {
+    vertical-align: middle;
+    color: #fefefe;
+    }
+    .submit-row {
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    background: #751b1b !important;
+     border: 1px solid #751b1b !important; 
+    border-radius: 4px;
+    text-align: right;
+    overflow: hidden;
+    }
+    input[type="submit"], button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #333;
+    }
+
+    #footer {
+    clear: both;
+    padding: 10px;
+    background-color: #0e0f0f;
+    }
+
+    .login #content {
+    padding: 20px 20px 0;
+    background-color: #0e0f0f;
+    }
+    .login .form-row label {
+        padding-right: 0.5em;
+        line-height: 2em;
+        font-size: 1em;
+        clear: both;
+        color: #fefefe !important;
+    }
+    .module 
+    {
+        border: none;
+        margin-bottom: 30px;
+        background: #0e0f0f !important;
+    }
+
+    #content-related 
+    {
+        background: #751b1b;
+    }
+
+    #branding h1, #branding h1 a:link, #branding h1 a:visited 
+    {
+        color: #fefefe;
+    }
+    td, th 
+    {
+        font-size: 13px;
+        line-height: 16px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        padding: 8px;
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        background-color: #0e0f0f !important;
+        color: #fefefe !important;
+    }
+</style>
 {% endblock %}
 
 {% block branding %}
 
-<h1 id="site-name"><a href="{% url 'admin:index' %}">TSP Administracja</a></h1>
+<h1 id="site-name"><a href="{% url 'admin:index' %}">TSP Administration</a></h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

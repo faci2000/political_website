@@ -419,7 +419,6 @@ h3
 
 .NewsText
 {
-    height: 90px;
     
     text-align: left;
     margin-left: 39px;
@@ -1107,14 +1106,14 @@ ol > li > ul > li
    float: left;  
 }
 
-.ArticleIMG
+.Portrait
 {
    
     margin: 20px 0;
    
     
-    width: 550px;
-    height: 150px;   
+    height:  550px;
+    width: 310px;   
     
 
     
@@ -1123,12 +1122,60 @@ ol > li > ul > li
        
 }
 
-.ArticleIMG > img
+.Portrait > img
 {
-    width: 550px;
-    height: 150px;   
+    height: 550px;
+    width: 310px;   
     
 }
+
+.Landscape
+{
+   
+    margin: 20px 0;
+   
+    
+    width: 550px;
+    height: 310px;   
+    
+
+    
+    margin-right: auto;
+    margin-left: auto;
+       
+}
+
+.Landscape > img
+{
+    width: 550px;
+    height: 310px;   
+    
+}
+
+.Square
+{
+   
+    margin: 20px 0;
+   
+    
+    width: 430px;
+    height: 430px;   
+    
+
+    
+    margin-right: auto;
+    margin-left: auto;
+       
+}
+
+.Square > img
+{
+    width: 430px;
+    height: 430px;   
+    
+}
+
+
 
 .ArticleText
 {

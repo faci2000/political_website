@@ -86,9 +86,19 @@
                             
                             <div style="clear: both;"></div>
                             {% if article.articleimage_set.all %}
-                                <div class="ArticleIMG">
-                                    <img src="{{article.articleimage_set.all.0.image.url}}" width="{{article.articleimage_set.all.0.width}}" height="{{article.articleimage_set.all.0.height}}" alt="photo"/>
+                                {% if  article.articleimage_set.all.0.get_ratio_display == "pionowo"%}
+                                <div class="Portrait">
+                                    <img src="{{article.articleimage_set.all.0.image.url}}"  alt="photo"/>
                                 </div>
+                                {% elif article.articleimage_set.all.0.get_ratio_display == "poziome"%}
+                                <div class="Landscape">
+                                    <img src="{{article.articleimage_set.all.0.image.url}}"  alt="photo"/>
+                                </div>
+                                {% else %}
+                                <div class="Square">
+                                    <img src="{{article.articleimage_set.all.0.image.url}}"  alt="photo"/>
+                                </div>
+                                {% endif %}
                             {% endif %}
                             <div class="ArticleText">                                        
                                 
