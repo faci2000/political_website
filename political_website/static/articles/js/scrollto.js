@@ -1,4 +1,5 @@
 var hashTagActive = "";
+$(document).ready(function() {
     $(".scroll").on("click touchstart" , function (event) {
         if(hashTagActive != this.hash) { //this will prevent if the user click several times the same link to freeze the scroll.
             event.preventDefault();
@@ -12,7 +13,8 @@ var hashTagActive = "";
             //go to destination
             $('html,body').animate({
                 scrollTop: dest
-            }, 2000, 'swing');
+            }, 1000, 'swing');
             hashTagActive = this.hash;
         }
     });
+});
