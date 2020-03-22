@@ -18,11 +18,9 @@
             <div id="ContentTable">
                 <ol class="chapters">
 
-                    {% load static %}
-                    <script src="{% static 'articles/js/show_hide.js' %}"></script>
-
                     
                         {% regroup articles by date.month as articles_list %}
+                        
                         {% load static %}
                         <script src="{% static 'articles/js/show_hide.js' %}"></script>
                         <script src="{% static 'articles/js/date.js' %}"></script>
