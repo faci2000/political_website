@@ -25,6 +25,7 @@
                         <script src="{% static 'articles/js/show_hide.js' %}"></script>
                         <script src="{% static 'articles/js/date.js' %}"></script>
                         <script src="{% static 'articles/js/scrollto.js' %}"></script>
+                        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
                         {% for arts in articles_list %}
                         <li>   
                             <div class="MainList">   
@@ -40,7 +41,7 @@
                             {% endif %}
                             {% for article in arts.list %}
                                 
-                                <li> <a href="#{{article.id}}"> {{ article.title }}</a></li>                                  
+                                <li> <a class="scroll" href="#{{article.id}}"> {{ article.title }}</a></li>                                  
                                 
                             {% endfor %}
                             </ul>
