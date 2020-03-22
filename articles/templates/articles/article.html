@@ -21,22 +21,30 @@
             <div style="clear: both;"></div>
             
             <article>
-            {% for img in object.articleimage_set.all %}
-                {%if forloop.first%}
-                    <div class="ArticleIMG">	                
-                        <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
-                    </div>
-                    <div class="ArticleText">                                        
+            {% if  object.articleimage_set.all%}
+                {% for img in object.articleimage_set.all %}
+                    {%if forloop.first%}
+                        <div class="ArticleIMG">	                
+                            <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
+                        </div>
+                        <div class="ArticleText">                                        
+                            <p>
+                                {{object.body|safe}}
+                            </p> 
+                        </div>
+                    {% else %}
+                        <div class="ArticleIMG">	                
+                            <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="ArticleText">                                        
                          <p>
                             {{object.body|safe}}
                         </p> 
                     </div>
-                {% else %}
-                    <div class="ArticleIMG">	                
-                        <img src="{{img.image.url}}" width="{{img.width}}" height="{{img.height}}" alt="photo"/>                
-                    </div>
-                {% endif %}
-            {% endfor %}
+            {% endif %}
             </article>
         </div>
     </div>

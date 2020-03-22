@@ -27,7 +27,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'xdm#9-al)apaf(x9v(m-f(7sl!5n$==-&ct_9g$^g@u*v+ft!5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tspolska.herokuapp.com',
 '127.0.0.1']

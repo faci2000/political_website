@@ -60,10 +60,10 @@
                             </ol>
                         {% else %}
                             <ol>                   
-                                <li><a href="/">O nas</a></li>   
+                                <li><a href="/about">O nas</a></li>   
                                 <li><a href="/articles">Artykuły</a></li>                     
                                 <li><a href="/current">Aktualności</a></li>   
-                                <li><a href="/">Kontakt</a></li>
+                                <li><a href="/contact">Kontakt</a></li>
                             </ol>
                         {%endif%}
 
@@ -96,7 +96,21 @@
         {% block content %}
 
         {% endblock %}
-
+        {%if request.path != "/"%}
+            <header id="AlternativeNav">
+                <div class="altnavdiv">
+                    <div class="Logo"> 
+                        <a href="/" id="MainLogo">
+                        <img class="Logo" src="{% static 'info/img/kon.png' %}" alt="logo"/>
+                        </a>
+                    </div>
+                    <a class="BackToMainB" href="/" >
+                    <div class="AltButton"> Wróć na stronę główną </div>
+                    </a>
+                    <div style="clear: both;"></div>
+                </div>
+            <header/>
+        {%endif%}
 
         <!-- ###### "Login Tile" ###### -->
         <section class="LoginSection">
