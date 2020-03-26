@@ -27,10 +27,12 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'xdm#9-al)apaf(x9v(m-f(7sl!5n$==-&ct_9g$^g@u*v+ft!5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['tspolska.herokuapp.com',
-'127.0.0.1']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'towstudpol.pl',
+    ]
 
 
 # Application definition
@@ -72,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
             # 'extensions':[
             #     'jinja2.ext.i18n',
@@ -120,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 USE_I18N = True
 
@@ -162,12 +165,12 @@ TINYMCE_DEFAULT_CONFIG = {
 # Media files (Images)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'public','media') 
 
 # Static files (CSS, JavaScript)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/    
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static') 
 STATIC_URL = '/static/'    
 
 # Extra places for collectstatic to find static files.
