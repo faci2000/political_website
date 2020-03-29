@@ -606,7 +606,7 @@ h3
 
 .socialdivs
 {
-    width: 420px;
+    width: 525px;
     margin-left: auto;
     margin-right: auto;
     
@@ -792,12 +792,12 @@ a.LinkMedia
 .footer
 {
     font-size: 16px;
-    padding: 3px;
+    padding: 10px;
     background-color: #0a0b0b;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
     
-    height: 30px;
+    height: 75px;
     width: 100%
       
 }
@@ -817,9 +817,9 @@ a.LinkMedia
 
 .footerPH
 {
-        height: 60px;
+        height: 140px;
         font-size: 18px;
-        padding: 5px;
+        
         background-color: #0a0b0b;
         text-align: center;
         padding: 30px; 
@@ -1330,4 +1330,35 @@ ol > li > ul > li
 	{
 		min-height: 1300px; /* test */ 
 	}
+}
+
+
+
+.tumblr
+{
+     margin: 0px 10px;
+    background-color: #03060a;
+
+    width: 85px;
+    height: 90px;
+    float:left;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.tumblr:hover
+{
+    background-color: #35465c;
+}
+
+.tumblr .LinkMedia
+{
+    color: #fefefe;
+
+    transition: all 1s ease-in-out;
+}
+
+.tumblr .LinkMedia:hover
+{
+    color: black;
 }
