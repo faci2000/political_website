@@ -113,6 +113,12 @@
       "css": "up-circled",
       "code": 59403,
       "src": "entypo"
+    },
+    {
+      "uid": "d491462e64eb5b8c4f064108a2ff1780",
+      "css": "tumblr",
+      "code": 62229,
+      "src": "entypo"
     }
   ]
 }

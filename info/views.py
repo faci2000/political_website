@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpRequest
 
 
-def about(request):
-    return render(request, 'info/about.html')
+def about(HttpRequest):
+    return render(HttpRequest, 'info/about.html')
 
-def contact(request):
-    return render(request, 'info/contact.html')
+def contact(HttpRequest):
+    return render(HttpRequest, 'info/contact.html')
