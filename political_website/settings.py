@@ -32,6 +32,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'towstudpol.pl',
+    'tspolska.herokuapp.com',
     ]
 
 
